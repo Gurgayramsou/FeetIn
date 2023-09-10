@@ -39,24 +39,73 @@
 
 /* all buttons outline remove start */
 .btn {
-  border: none;
+  border: none !important;
   background-color: white;
 }
 .btn:focus {
-  outline: none;
+  outline: none !important;
+  border: 0;
 }
 
 /*  button end */
 
-.menuBtn {
+/* menu buttons style start */
+.menuBtn a {
   position: relative;
   transition: all 2s ease-in-out 0.5s;
 }
 
-.menuBtn:focus {
+.menuBtn a:focus {
   bottom: 10px;
 }
+/* menu buttons style end */
 
+/* corousal style */
 .carousel {
   height: 20%;
 }
+
+/* user Details styling start */
+.usrIcon {
+  height: 20px;
+  width: 30px;
+  margin: 3px 10px;
+}
+
+#userName,
+#userOtions a {
+  font-family: "Arsenal", sans-serif;
+  font-family: "Lilita One", cursive;
+  font-family: "Open Sans", sans-serif;
+}
+
+#userIcn {
+  width: 30%;
+}
+
+#userOptions {
+  position: absolute;
+  z-index: 10;
+  width: 7%;
+  list-style-type: none;
+  padding-left: 10px;
+  color: white;
+  font-weight: 10rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgba(94, 91, 81, 0.8);
+  padding-left: 0px;
+  visibility: hidden;
+  /* background: black; */
+}
+#userOptions li {
+  text-align: center;
+  border-bottom: 0.5px solid white;
+}
+#userOptions li a {
+  text-decoration: none;
+  color: white;
+}
+/* #userOptions li:hover {
+  background-color: rgba(94, 91, 81, 1);
+} */
+/* user Details styling end */
