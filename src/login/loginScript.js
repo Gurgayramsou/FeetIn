@@ -1,28 +1,25 @@
-import {user} from './models/user.js';
+import { user } from "./models/user.js";
 
-var emailInput = document.querySelector('#email');
-var pwInput = document.querySelector('#pw');
-emailInput.addEventListener('keyup',()=>{
-    const userMail = emailInput.value;
-    if(user.map((usr)=>usr.email).includes(userMail)){
-        var checkmark = document.querySelector('.checkmark')
-        checkmark.style.visibility = 'visible';
-        checkmark.style.transitionDelay = "0.3s";
-        checkmark.style.transitionDuration = "2s";
-        checkmark.style.transitionTimingFunction = "ease-out";
+var emailInput = document.querySelector("#email");
+var pwInput = document.querySelector("#pw");
+emailInput.addEventListener("keyup", () => {
+  const userMail = emailInput.value;
+  if (user.map((usr) => usr.email).includes(userMail)) {
+    var checkmark = document.querySelector(".checkmark");
+    checkmark.style.visibility = "visible";
+    checkmark.style.transitionDelay = "0.3s";
+    checkmark.style.transitionDuration = "2s";
+    checkmark.style.transitionTimingFunction = "ease-out";
+  } else {
+    document.querySelector(".checkmark").style.visibility = "hidden";
+  }
+});
 
-    }else{
-        document.querySelector('.checkmark').style.visibility = 'hidden';
-    }
-})
-
-setInterval(
-    ()=>{
-        if(!emailInput.value){
-            document.querySelector('.checkmark').style.visibility = 'hidden';
-        }
-    },10
-)
+setInterval(() => {
+  if (!emailInput.value) {
+    document.querySelector(".checkmark").style.visibility = "hidden";
+  }
+}, 10);
 
 // document.querySelector('button').addEventListener('click',
 // ()=>{
@@ -32,8 +29,3 @@ setInterval(
 
 //     }
 // })
-
-document.querySelector('#lgn').addEventListener('submit',function submitted(){
-    window.location.href = 'https://google.com'
-})
-
