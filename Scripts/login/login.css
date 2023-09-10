@@ -1,117 +1,127 @@
-
-
-
-#lgn{
-   display: flex;
-   flex-direction:column;
-   align-items:  center;
-   text-align: center;
-   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-   height: 35%;
-   width: 20%;
-   position: absolute;
-   top: 32%;
-   left: 38%;
-   overflow: visible;
+/* login box start */
+#lgn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 35%;
+  width: 20%;
+  position: absolute;
+  top: 32%;
+  left: 38%;
+  overflow: visible;
 }
-#lgn input,button{
-    margin : 3%;
-    border: 0.5px solid rgb(213, 226, 230);
-    height: 1.7em;
-    width: 60%;
-    text-align: center;
-    transition: width 0s 1s;
-    border-radius: 3px;
+/* login box start */
 
+/* input field styling start */
+#lgn input,
+button {
+  margin: 3%;
+  border: 0.5px solid rgb(213, 226, 230);
+  height: 1.7em;
+  width: 60%;
+  text-align: center;
+  transition: width 0s 1s;
+  border-radius: 3px;
 }
-#pw{
-    margin-bottom: 10%;
+
+input:focus,
+input:hover {
+  outline: none;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
+  width: 0.5em;
 }
-#email{
+
+/* input field styling start */
+
+/* modify the position and width of fields */
+#pw {
+  margin-bottom: 10%;
+}
+#email {
   width: 10px;
 }
+/* end modifying */
 
-input:focus,input:hover{
-    outline: none;
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
-    width: 0.5em;
+/* submit button start*/
+#lgn button {
+  background-color: rgb(45, 60, 145);
+  color: white;
+  border-radius: 5px;
+  height: 15%;
+  width: 33%;
+  transition: background-color 0.7s ease-out;
 }
 
-#lgn button{
-    background-color: rgb(45, 60, 145);
-    color: white;
-    border-radius: 5px;
-    height: 15%;
-    width: 33%;
-    transition: background-color 0.7s ease-out;
+#lgn button:hover {
+  background-color: rgb(128, 140, 207);
+  color: white;
 }
 
-#lgn button:hover{
-    background-color: rgb(128, 140, 207);
-    color: white ;
+/* submit button end*/
+
+#lgn h3 {
+  font-family: "Open Sans", sans-serif;
 }
 
-
-#lgn h3{
-    font-family: 'Open Sans', sans-serif;
-}
- 
-
-.formEntry{
-    display: flex;
+.formEntry {
+  display: flex;
   align-items: center;
 }
 
-
 /* spin circle */
 .checkmark__circle {
-    stroke-dasharray: 166;
-    stroke-dashoffset: 166;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    stroke: #7ac142;
-    fill: none;
-    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 12px;
+  height: 17px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  visibility: hidden;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill 0.4s ease-in-out 0.4s forwards, scale 5s ease-in-out 0.9s both;
+  position: absolute;
+  left: 85%;
+  transition: visibility 0.2s ease-out;
+}
+
+/* check mark on validation effect start */
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
   }
-  
-  .checkmark {
-    width: 12px;
-    height: 17px;
-    border-radius: 50%;
-    display: block;
-    stroke-width: 2;
-    stroke: #fff;
-    visibility:hidden;
-    stroke-miterlimit: 10;
-    box-shadow: inset 0px 0px 0px #7ac142;
-    animation: fill .4s ease-in-out .4s forwards, scale 5s ease-in-out .9s both;
-    position:absolute;
-    left: 85%;
-    transition: visibility .2s ease-out;
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
   }
-  
-  .checkmark__check {
-    transform-origin: 50% 50%;
-    stroke-dasharray: 48;
-    stroke-dashoffset: 48;
-    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
   }
-  
-  @keyframes stroke {
-    100% {
-      stroke-dashoffset: 0;
-    }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
   }
-  @keyframes scale {
-    0%, 100% {
-      transform: none;
-    }
-    50% {
-      transform: scale3d(1.1, 1.1, 1);
-    }
-  }
-  @keyframes fill {
-    100% {
-      box-shadow: inset 0px 0px 0px 30px #7ac142;
-    }
-  }
+}
+/* check mark on validation effect end */
