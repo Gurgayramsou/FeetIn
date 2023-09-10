@@ -59,13 +59,6 @@ input:focus,input:hover{
 
 .formEntry{
     display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
-}
-
-.formEntry{
-    display: flex;
   align-items: center;
 }
 
@@ -88,12 +81,13 @@ input:focus,input:hover{
     display: block;
     stroke-width: 2;
     stroke: #fff;
-    /* visibility: hidden; */
+    visibility:hidden;
     stroke-miterlimit: 10;
     box-shadow: inset 0px 0px 0px #7ac142;
     animation: fill .4s ease-in-out .4s forwards, scale 5s ease-in-out .9s both;
     position:absolute;
     left: 85%;
+    transition: visibility .2s ease-out;
   }
   
   .checkmark__check {

@@ -10,9 +10,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="lgn">
+    <form id="lgn" onsubmit="Submitted()" method="POST" action="http://127.0.0.1:5501/Scripts/login/login.js">
         <h3>Login</h3>
-        <div class="formEntry"> <input type="text" name="email" id="email" placeholder="Enter your Email" style="width: 90%;">
+        <div class="formEntry"> <input type="email" name="email" id="email" placeholder="Enter your Email" style="width: 90%;" autocomplete="on">
             <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                 <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
                 <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
@@ -20,5 +20,6 @@
         <input type="password" name="pw" id="pw" placeholder="Enter password">
         <button type="submit">Submit</button>
     </div>
+    <script src="loginScript.js" type="module"></script>
 </body>
-</html>
+</htm
