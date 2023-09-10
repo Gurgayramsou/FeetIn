@@ -1,0 +1,33 @@
+#nameComp {
+  font-family: "Lilita One", cursive;
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  margin: 2%;
+}
+
+/* search box styling start */
+#srch {
+  margin: 3%;
+  border: 0.5px solid rgb(213, 226, 230);
+  height: 1.4em;
+  width: 40%;
+  text-align: center;
+  transition: width 0s 1s;
+  border-radius: 3px;
+}
+
+#srch:focus,
+#srch:hover {
+  outline: none;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
+  width: 0.5em;
+}
+/* search box styling end */
