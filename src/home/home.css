@@ -1,3 +1,14 @@
+*,
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+nav {
+  /* background-image: linear-gradient(to left, rgb(210, 227, 252), white); */
+
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
 /* company name in big font */
 #nameComp {
   font-family: "Lilita One", cursive;
@@ -69,7 +80,7 @@
 .usrIcon {
   height: 20px;
   width: 30px;
-  margin: 3px 10px;
+  /* margin: 7px 10px; */
 }
 
 #userName,
