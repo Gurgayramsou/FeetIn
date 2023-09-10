@@ -1,16 +1,22 @@
+/* company name in big font */
 #nameComp {
   font-family: "Lilita One", cursive;
   font-family: "Open Sans", sans-serif;
   font-size: 50px;
 }
 
+/* brand and logo style start */
 .brand {
   display: flex;
   align-items: center;
 }
+/* brand and logo style end */
 
 .menu {
   margin: 2%;
+  height: 23px;
+  width: 30px;
+  color: yellow;
 }
 
 /* search box styling start */
@@ -28,6 +34,29 @@
 #srch:hover {
   outline: none;
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
-  width: 0.5em;
 }
 /* search box styling end */
+
+/* all buttons outline remove start */
+.btn {
+  border: none;
+  background-color: white;
+}
+.btn:focus {
+  outline: none;
+}
+
+/*  button end */
+
+.menuBtn {
+  position: relative;
+  transition: all 2s ease-in-out 0.5s;
+}
+
+.menuBtn:focus {
+  bottom: 10px;
+}
+
+.carousel {
+  height: 20%;
+}
