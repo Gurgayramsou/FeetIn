@@ -3,6 +3,29 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+/* modal setting */
+.modalBack {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: -20;
+}
+.modalWindow {
+  position: absolute;
+  top: 32%;
+  left: 34%;
+  height: 110px;
+  width: 350px;
+  z-index: -30;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 2%;
+  font-weight: 50em;
+}
+
 nav {
   /* background-image: linear-gradient(to left, rgb(210, 227, 252), white); */
 
@@ -111,8 +134,10 @@ nav {
 #userOptions li {
   text-align: center;
   border-bottom: 0.5px solid white;
+  cursor: pointer;
 }
-#userOptions li a {
+#userOptions li a,
+.modalWindow button a {
   text-decoration: none;
   color: white;
 }
